@@ -1,4 +1,4 @@
-import gpiozero
+import gpiozero # pip3 install gpiozero
 import Adafruit_DHT # https://github.com/adafruit/Adafruit_Python_DHT
 import requests
 import time
@@ -22,4 +22,5 @@ while True:
         requests.post(weatherstation_url, json=message)
         print('request sent')
     except Exception as E:
-        print(E)`
+        print("Could not send request error:")
+        print(E)
